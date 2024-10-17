@@ -25,27 +25,60 @@
             </input>
 
             <div class="mt-48 page-full-wrap relative ">
-                <input type="hidden" value="creator-page" id="page-type">
-                <img class="display-image m-auto" data-src="assets/images/logo.png" src="assets/images/konakia.png" alt="[Your photo alt]"/>
-                <h2 class="page-title page-text-color page-text-font mt-16 text-center">Δήλωσε Συμμετοχή Δενδροφύτευση</h2>
-                       
+
+                <h2 class="page-title page-text-color page-text-font text-center">Δήλωσε Συμμετοχή στη Δενδροφύτευση</h2>
+
+                <img class="display-image m-auto pa-16" data-src="assets/images/logo.png" src="assets/images/konakia.png" alt="[Your photo alt]"/>
+
+                <h3 class="page-subtitle page-text-color page-text-font text-center" id="countdown">\<==</h3>
+
                 <div class="mt-24">
                     <div class="page-item-wrap relative">
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank"  class="page-item-each py-10 flex-both-center" href="https://forms.gle/aiMjcfBfwNvg6Ppr9" data-id="261652" data-type="page_item">
                             <img class="link-each-image" data-src="assets/images/linkedin.png" src="assets/images/form.png" alt="LinkedIn @ [User]"/>
-                            <span class=" item-title text-center">Δήλωσε την ομάδα σου</span>
+                            <span class=" item-title text-center">Ομαδική Δήλωση για Δενδροφύτευση</span>
                         </a>
-                    </div>        
+                    </div>
                     <div class="page-item-wrap relative">
                         <div class="page-item flex-both-center absolute"></div>
                         <a target="_blank"  class="page-item-each py-10 flex-both-center" href="https://forms.gle/6fSfs66RbU5cwvCp6" data-id="261652" data-type="page_item">
                             <img class="link-each-image" data-src="assets/images/linkedin.png" src="assets/images/form.png" alt="LinkedIn @ [User]"/>
-                            <span class=" item-title text-center">Ατομική Δήλωση</span>
+                            <span class=" item-title text-center">Ατομική/Οικογενειακή  Δήλωση για Δενδροφύτευση</span>
                         </a>
-                    </div> 
-                </div>                                                                                
+                    </div>
+                </div>
             </div>
         </div>
     </body>
+
+    <script>
+        // Set the date we're counting down to
+        var countDownDate = new Date("Nov 15, 2024 00:00:00").getTime();
+
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+
+        // Get today's date and time
+        var now = new Date().getTime();
+
+        // Find the distance between now and the count down date
+        var distance = countDownDate - now;
+
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the result in the element with id="demo"
+        document.getElementById("countdown").innerHTML = "Έχεις ακόμα " + days + " μέρες " + hours + " ώρες !!!"
+
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("demo").innerHTML = "Έληξε";
+        }
+        }, 1000);
+    </script>
 </html>
