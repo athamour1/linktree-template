@@ -53,8 +53,11 @@
     </body>
 
     <script>
+        console.log("Epppp ti kaneis esy edw ?")
+        console.log("An theleis na me vreis mporeis sto thanosmour.tk@gmail.com")
+        console.log("Thanos apo TTM")
         // Set the date we're counting down to
-        var countDownDate = new Date("Nov 15, 2024 00:00:00").getTime();
+        var countDownDate = new Date("Oct 24, 2024 00:00:00").getTime();
 
         // Update the count down every 1 second
         var x = setInterval(function() {
@@ -72,12 +75,11 @@
         var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         // Display the result in the element with id="demo"
-        document.getElementById("countdown").innerHTML = "Έχεις ακόμα " + days + " μέρες " + hours + " ώρες !!!"
-
+        document.getElementById("countdown").innerHTML = "Έχεις ακόμα " + days + ((days < 2) ? ' μέρα ' : ' μέρες ') + hours + ((hours < 2) ? ' ώρα !!!' : ' ώρες !!!')
         // If the count down is finished, write some text
         if (distance < 0) {
             clearInterval(x);
-            document.getElementById("demo").innerHTML = "Έληξε";
+            document.getElementById("countdown").innerHTML = "Έληξε η δηλωση.";
         }
         }, 1000);
     </script>
